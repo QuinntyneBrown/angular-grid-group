@@ -1,0 +1,6 @@
+<app-collapsible-header (stateChange)="onStateChanged($event)">
+    <ng-content select=".title"></ng-content>
+</app-collapsible-header>
+<ng-content *ngIf="isOpen" select=".content">
+    
+</ng-content>
