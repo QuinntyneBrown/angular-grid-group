@@ -9,7 +9,6 @@ import { Component, HostListener, Output, EventEmitter } from "@angular/core";
   }
 })
 export class CollapsibleHeaderComponent { 
-
   public isOpen:boolean = false;
 
   @HostListener('click', ['$event'])
@@ -21,4 +20,5 @@ export class CollapsibleHeaderComponent {
   @Output()
   public stateChange: EventEmitter<any> = new EventEmitter();
 
+  public get icon() { return this.isOpen ? "keyboard_arrow_up":"keyboard_arrow_down"; }
 }
